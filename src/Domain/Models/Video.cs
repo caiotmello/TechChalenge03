@@ -25,10 +25,9 @@ namespace Domain.Models
         private void ValidateEntity()
         {
             AssertionConcern.AssertArgumentNotEmpty(Title, "Title could not be empty!");
+            AssertionConcern.AssertArgumentFalse(AuthorId <= 0, "Author Id must be informed!");
 
             AssertionConcern.AssertArgumentLength(Title, 100, "The Title must be only 100 characters!");
-
-
         }
     }
 }

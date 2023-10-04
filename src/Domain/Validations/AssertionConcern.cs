@@ -74,7 +74,7 @@
         {
             if (boolValue)
             {
-                throw new InvalidOperationException(message);
+                throw new DomainValidationException(message);
             }
         }
     }

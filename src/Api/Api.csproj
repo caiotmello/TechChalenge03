@@ -21,4 +21,7 @@
     <ProjectReference Include="..\Infrastructure.Ioc\Infrastructure.Ioc.csproj" />
   </ItemGroup>
 
+	<ItemGroup>
+		<InternalsVisibleTo Include="Test" />
+	</ItemGroup>
 </Project>

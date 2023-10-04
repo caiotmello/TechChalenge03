@@ -14,11 +14,12 @@ namespace Domain.Models
         public int AuthorId { get; set; }
         public virtual Author Author { get; set; }
 
-        public Article(string title, string content,string img, string category, int authorId) 
+        public Article(string title, string content, string category, string img, int authorId) 
         {
             Title = title;
             Content = content;
             Category = category;
+            Img= img;
             AuthorId = authorId;
             PublishDate = DateTime.Now;
             ValidateEntity();
@@ -26,8 +27,8 @@ namespace Domain.Models
 
         public void ValidateEntity()
         {
-            AssertionConcern.AssertArgumentFalse(string.IsNullOrEmpty(Title), "Name must be informed!");
-            AssertionConcern.AssertArgumentFalse(string.IsNullOrEmpty(Content), "Content must be informed!");
+            AssertionConcern.AssertArgumentNotEmpty(Title, "Title must be informed!");
+            AssertionConcern.AssertArgumentNotEmpty(Content, "Content must be informed!");
             AssertionConcern.AssertArgumentFalse(AuthorId <= 0 , "Author Id must be informed!");
 
             AssertionConcern.AssertArgumentLength(Title, 100, "The Title must be only 100 characters!");
