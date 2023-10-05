@@ -2,6 +2,7 @@
 using Application.Services;
 using Application.Services.Interface;
 using Domain.Validations;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
