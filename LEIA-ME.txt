@@ -1,0 +1,13 @@
+Link para GitHub
+https://github.com/caiotmello/TechChallenge03
+
+EndPoints
+https://techchallenge02.azurewebsites.net/api/Article
+https://techchallenge02.azurewebsites.net/api/Author
+https://techchallenge02.azurewebsites.net/api/Video
+https://techchallenge02.azurewebsites.net/api/Upload
+https://techchallenge02.azurewebsites.net/api/User/Login
+https://techchallenge02.azurewebsites.net/api/User/SignUp
+
+Link Swagger
+https://techchallenge02.azurewebsites.net/swagger/index.html

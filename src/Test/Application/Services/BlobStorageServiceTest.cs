@@ -9,7 +9,7 @@ namespace Test.Application.Services
 {
     public class BlobStorageServiceTest
     {
-        private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=caiotascheti;AccountKey=BqTAn6A76ptGrXQ+nJ2m9z8Xv5qBLeVBExTrx1XtSK3D+jpgi9QSqAn3XCQklYGhGIV4E2fwIua++AStKNG/Ew==;EndpointSuffix=core.windows.net";
+        private const string _connectionString = "DefaultEndpointsProtocol=https;AccountName=techchallenge03;AccountKey=a9mvdkg7fGxoRrldYFaMvdWH/+L8mo03e2y/I/vXCNi2pPWYIc8u9KWCo8pSBYdNfQXvVrOKoaIz+AStsaqkSg==;EndpointSuffix=core.windows.net";
         private IConfiguration _configuration;
 
         public BlobStorageServiceTest()
