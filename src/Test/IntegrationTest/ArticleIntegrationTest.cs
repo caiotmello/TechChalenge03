@@ -3,8 +3,10 @@ using Application.Dtos.Response;
 using Application.Services;
 using Infrastructure.Data.Context;
 using System.Net;
+using System.Net.Http;
 using System.Net.Http.Json;
 using Test.Fixtures;
+using Test.Helpers;
 
 namespace Test.IntegrationTest
 {
@@ -25,8 +27,6 @@ namespace Test.IntegrationTest
         [Trait("Category", "ArticleController Validation")]
         public async Task GET_GetAsync_ReturnOkResultWithData()
         {
-            //await _integrationTestFixture.FillDatabaseAsync();
-
             var url = "/api/Article";
             var responce = await _integrationTestFixture.Client.GetAsync(url);
             var articles = await _integrationTestFixture.Client.GetFromJsonAsync<ResultService<ICollection<ReadArticleResponseDto>>>(url);
@@ -53,8 +53,6 @@ namespace Test.IntegrationTest
         [Trait("Category", "ArticleController Validation")]
         public async Task GET_GetByIdAsync_ReturnOkResultWhenFindArticle()
         {
-            //await _integrationTestFixture.FillDatabaseAsync();
-
             var url = "/api/Article/2";
             var responce = await _integrationTestFixture.Client.GetAsync(url);
             var articles = await _integrationTestFixture.Client.GetFromJsonAsync<ResultService<ReadArticleResponseDto>>(url);
@@ -67,8 +65,6 @@ namespace Test.IntegrationTest
         [Trait("Category", "ArticleController Validation")]
         public async Task GET_GetByIdAsync_ReturnBadRequestResultWhenArticleNotFound()
         {
-            //await _integrationTestFixture.FillDatabaseAsync();
-
             var url = "/api/Article/99";
             var responce = await _integrationTestFixture.Client.GetAsync(url);
 

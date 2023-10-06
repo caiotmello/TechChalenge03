@@ -7,9 +7,6 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
-#if !DEBUG
-    [Authorize]
-#endif
     [Route("api/[controller]")]
     [ApiController]
     public class ArticleController : ControllerBase
