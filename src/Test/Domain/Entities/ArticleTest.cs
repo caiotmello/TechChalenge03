@@ -13,7 +13,7 @@ namespace Test.Domain.Entities
             _articleTestFixture = articleTestFixture;
         }
 
-        [Fact(DisplayName = "Title should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Article - Title should not be empty")]
         [Trait("Category", "Article Validation")]
         public void ArticleValidation_ShouldThrowException_WhenTitleIsEmpty()
         {
@@ -22,7 +22,7 @@ namespace Test.Domain.Entities
             Assert.Equal("Title must be informed!", result.Message);
         }
 
-        [Fact(DisplayName = "Content should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Article - Content should not be empty")]
         [Trait("Category", "Article Validation")]
         public void ArticleValidation_ShouldThrowException_WhenContentIsEmpty()
         {
@@ -31,7 +31,7 @@ namespace Test.Domain.Entities
             Assert.Equal("Content must be informed!", result.Message);
         }
 
-        [Fact(DisplayName = "AuthorId should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Article - AuthorId should not be empty")]
         [Trait("Category", "Article Validation")]
         public void ArticleValidation_ShouldThrowException_WhenAuthorIdIsEmpty()
         {
@@ -40,7 +40,7 @@ namespace Test.Domain.Entities
             Assert.Equal("Author Id must be informed!", result.Message);
         }
 
-        [Fact(DisplayName = "Title should not be more than 100 characters")]
+        [Fact(DisplayName = "[UnitTest] Article - Title should not be more than 100 characters")]
         [Trait("Category", "Article Validation")]
         public void ArticleValidation_ShouldThrowException_WhenTitleHasMaxThenLength()
         {
@@ -49,7 +49,7 @@ namespace Test.Domain.Entities
             Assert.Equal("The Title must be only 100 characters!", result.Message);
         }
 
-        [Fact(DisplayName = "Create Article with success")]
+        [Fact(DisplayName = "[UnitTest] Article - Create Article with success")]
         [Trait("Category", "Article Validation")]
         public void ArticleValidation_ShouldCreateVideoWithSuccess()
         {

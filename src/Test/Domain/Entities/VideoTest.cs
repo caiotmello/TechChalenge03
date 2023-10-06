@@ -6,7 +6,7 @@ namespace Test.Domain.Entities
 {
     public class VideoTest
     {
-        [Fact(DisplayName ="Title should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Video - Title should not be empty")]
         [Trait("Category", "Video Validation")]
         public void  VideoValidation_ShouldThrowException_WhenTitleIsEmpty()
         {
@@ -16,7 +16,7 @@ namespace Test.Domain.Entities
             Assert.Equal("Title could not be empty!", result.Message);
         }
 
-        [Fact(DisplayName = "AuthorId should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Video - AuthorId should not be empty")]
         [Trait("Category", "Video Validation")]
         public void VideoValidation_ShouldThrowException_WhenAuthorIdIsEmpty()
         {
@@ -26,7 +26,7 @@ namespace Test.Domain.Entities
             Assert.Equal("Author Id must be informed!", result.Message);
         }
 
-        [Fact(DisplayName = "Title should not be more than 100 characters")]
+        [Fact(DisplayName = "[UnitTest] Video - Title should not be more than 100 characters")]
         [Trait("Category", "Video Validation")]
         public void VideoValidation_ShouldThrowException_WhenTitleHasMaxThenLength()
         {
@@ -36,7 +36,7 @@ namespace Test.Domain.Entities
             Assert.Equal("The Title must be only 100 characters!", result.Message);
         }
 
-        [Fact(DisplayName = "Create Video with success")]
+        [Fact(DisplayName = "[UnitTest] Video - Create Video with success")]
         [Trait("Category", "Video Validation")]
         public void VideoValidation_ShouldCreateVideoWithSuccess()
         {

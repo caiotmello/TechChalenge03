@@ -24,7 +24,7 @@ namespace Test.Application.Services
                 .Build();
         }
 
-        [Theory(DisplayName = "Validate file extension for upload")]
+        [Theory(DisplayName = "[UnitTest] BlobStorageService - Validate file extension for upload")]
         [Trait("Categoria","Upload Validation")]
         [InlineData(Media.Image, "image.jpeg")]
         [InlineData(Media.Image, "Image.png")]
@@ -40,7 +40,7 @@ namespace Test.Application.Services
             Assert.Equal(media, result);
         }
 
-        [Theory(DisplayName = "Validate file extension for upload")]
+        [Theory(DisplayName = "[UnitTest] BlobStorageService - Validate file extension for upload")]
         [Trait("Categoria", "Upload Validation")]
         [InlineData(Media.Image, "image.gif")]
         [InlineData(Media.Video, "video.mkr")]

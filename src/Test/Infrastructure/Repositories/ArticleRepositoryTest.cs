@@ -16,7 +16,7 @@ namespace Test.Infrastructure.Repositories
             _articleTestFixture = articleTestFixture;
         }
 
-        [Fact(DisplayName = "Should add one article to Database")]
+        [Fact(DisplayName = "[UnitTest] ArticleRepository - Should add one article to Database")]
         [Trait("Category", "ArticleRepository Validation")]
         public async void AddAsync_ShouldSalveOneArticleOnDatabase()
         {
@@ -31,7 +31,7 @@ namespace Test.Infrastructure.Repositories
 
         }
 
-        [Fact(DisplayName = "Should return one article by Id")]
+        [Fact(DisplayName = "[UnitTest] ArticleRepository - Should return one article by Id")]
         [Trait("Category", "ArticleRepository Validation")]
         public async void GetAsync_ShouldReturnOneArticleById()
         {

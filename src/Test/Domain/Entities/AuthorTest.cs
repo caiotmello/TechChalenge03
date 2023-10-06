@@ -13,7 +13,7 @@ namespace Test.Domain.Entities
             _authorTestFixture = authorTestFixture;
         }
 
-        [Fact(DisplayName = "Name should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Author - Name should not be empty")]
         [Trait("Category", "Author Validation")]
         public void AuthorValidation_ShouldThrowException_WhenNameIsEmpty()
         {
@@ -22,7 +22,7 @@ namespace Test.Domain.Entities
             Assert.Equal("Name must be informed!", result.Message);
         }
 
-        [Fact(DisplayName = "Email should not be empty")]
+        [Fact(DisplayName = "[UnitTest] Author - Email should not be empty")]
         [Trait("Category", "Author Validation")]
         public void AuthorValidation_ShouldThrowException_WhenEmailIsEmpty()
         {
@@ -31,16 +31,16 @@ namespace Test.Domain.Entities
             Assert.Equal("Email must be informed!", result.Message);
         }
 
-        [Fact(DisplayName = "Title should not be more than 50 characters")]
+        [Fact(DisplayName = "[UnitTest] Author - Title should not be more than 50 characters")]
         [Trait("Category", "Author Validation")]
         public void AuthorValidation_ShouldThrowException_WhenTitleHasMaxThenLength()
         {
             var result = Assert.Throws<DomainValidationException>(() => _authorTestFixture.GenerateAuthorNameMaxLenght());
 
-            Assert.Equal("The Name must be only 50 characteres!", result.Message);
+            Assert.Equal("[UnitTest] Author - The Name must be only 50 characteres!", result.Message);
         }
 
-        [Fact(DisplayName = "Create Author with success")]
+        [Fact(DisplayName = "[UnitTest] Author - Create Author with success")]
         [Trait("Category", "Author Validation")]
         public void AuthorValidation_ShouldCreateVideoWithSuccess()
         {

@@ -36,20 +36,7 @@ namespace Test.IntegrationTest
             Assert.True(articles.Data.Count > 2);
         }
 
-        /*[Fact(DisplayName = "Should Retunr StatusCode Sucess and Empty Articles")]
-        [Trait("Category", "ArticleController Validation")]
-        public async Task GET_GetAsync_ReturnOkResultNoData()
-        {
-            var url = "/api/Article";
-            var responce = await _integrationTestFixture.Client.GetAsync(url);
-            var articles = await _integrationTestFixture.Client.GetFromJsonAsync<ResultService<ICollection<ReadArticleResponseDto>>>(url);
-
-            Assert.Equal(HttpStatusCode.OK, responce.StatusCode);
-            Assert.NotNull(articles);
-            Assert.True(articles.Data.Count == 0);
-        }*/
-
-        [Fact(DisplayName = "Should Return StatusCode Sucess when find article")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode Sucess when find article")]
         [Trait("Category", "ArticleController Validation")]
         public async Task GET_GetByIdAsync_ReturnOkResultWhenFindArticle()
         {
@@ -61,7 +48,7 @@ namespace Test.IntegrationTest
             Assert.NotNull(articles);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode BadRequest when article doesn't exist")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode BadRequest when article doesn't exist")]
         [Trait("Category", "ArticleController Validation")]
         public async Task GET_GetByIdAsync_ReturnBadRequestResultWhenArticleNotFound()
         {
@@ -71,7 +58,7 @@ namespace Test.IntegrationTest
             Assert.Equal(HttpStatusCode.BadRequest, responce.StatusCode);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode Sucess and create a new Article")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode Sucess and create a new Article")]
         [Trait("Category", "ArticleController Validation")]
         public async Task POST_AddAsync_CreateNewArticleReturnOkResult()
         {
@@ -84,7 +71,7 @@ namespace Test.IntegrationTest
             Assert.NotNull(data);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode Fail and create a new Article with empty title")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode Fail and create a new Article with empty title")]
         [Trait("Category", "ArticleController Validation")]
         public async Task POST_AddAsync_CreateNewArticleReturnBadRequestResult()
         {
@@ -98,7 +85,7 @@ namespace Test.IntegrationTest
             Assert.NotNull(data);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode Ok and delete the article")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode Ok and delete the article")]
         [Trait("Category", "ArticleController Validation")]
         public async Task DELETE_DeleteAsync_DeleteArticleReturnOkResult()
         {
@@ -112,7 +99,7 @@ namespace Test.IntegrationTest
             Assert.True(data.Data.FirstOrDefault(d => d.Id == 1) == null);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode Bad Request when Article doesn't exist")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode Bad Request when Article doesn't exist")]
         [Trait("Category", "ArticleController Validation")]
         public async Task DELETE_DeleteAsync_DeleteArticleReturnBadRequestResult()
         {
@@ -125,7 +112,7 @@ namespace Test.IntegrationTest
             Assert.NotNull(data);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode OK when Article is updated")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode OK when Article is updated")]
         [Trait("Category", "ArticleController Validation")]
         public async Task PUT_UpdateAsync_UpdateArticleReturnOkResult()
         {
@@ -149,7 +136,7 @@ namespace Test.IntegrationTest
             Assert.Equal(data.Data.FirstOrDefault(article => article.Id == 1).Title, article.Title);
         }
 
-        [Fact(DisplayName = "Should Return StatusCode BadRequest when Article doesn't exist")]
+        [Fact(DisplayName = "[IntegrationTest] ArticleController - Should Return StatusCode BadRequest when Article doesn't exist")]
         [Trait("Category", "ArticleController Validation")]
         public async Task PUT_UpdateAsync_UpdateArticleReturnBadRequestResult()
         {
