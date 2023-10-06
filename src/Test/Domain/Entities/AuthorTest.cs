@@ -37,7 +37,7 @@ namespace Test.Domain.Entities
         {
             var result = Assert.Throws<DomainValidationException>(() => _authorTestFixture.GenerateAuthorNameMaxLenght());
 
-            Assert.Equal("[UnitTest] Author - The Name must be only 50 characteres!", result.Message);
+            Assert.Equal("The Name must be only 50 characteres!", result.Message);
         }
 
         [Fact(DisplayName = "[UnitTest] Author - Create Author with success")]
